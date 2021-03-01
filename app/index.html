@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podrank</title>
+</head>
+<body>
+
+    <div class="row" id="check-single">
+        <div class="col">
+            <form method="post" enctype="multipart/form-data" action="/getscore">
+                <p>Please enter patent number </p>
+                <input type="text" name="patentNumber" id="patentNumber">
+                <br><br>
+                <input type="submit" value="Get score!">
+            </form>
+            <!-- <p>Below is the calculated score of the patent: </p> -->
+            <!-- <textarea name="scorevalue" id="scorevalue" cols="30" rows="10" style="margin: 0px; height: 36px; width: 272px;"></textarea> -->
+        </div>
+    </div>
+
+    <hr>
+    <br>
+
+    <!-- Check score for more than one patent -->
+    <div class="row" id="check-muliple">
+        <div class="col">
+            <form method="post" enctype="multipart/form-data" action="/getscorecsv">
+                <label for="csvfile">Upload csv file (having patent numbers)</label><br>
+                <input type="file" name="csvfile" id="csvfile" accept=".csv"><br>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>  
+    <!-- <div class="row" id="check-muliple">
+        <div class="col">
+            <form action="" method="post"></form>
+
+            
+
+
+        </div>
+    </div> -->
+    
+</body>
+</html>
